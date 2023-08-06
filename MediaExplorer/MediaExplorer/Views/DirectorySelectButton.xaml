@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MediaExplorer.Views.DirectorySelectButton"
+             xmlns:viewmodels="clr-namespace:MediaExplorer.ViewModels"
+             x:DataType="viewmodels:DirectorySelectButtonViewModel">
+  <ContentView.Content>
+        <Frame BackgroundColor="#202027" >
+            <StackLayout>
+                <Label Text="{Binding DirectoryName}" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"/>
+                <Label Text="{Binding LocalPath}" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"/>
+                <Button Command="{Binding SelectDirectory}" Text="Select Storage" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"/>
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

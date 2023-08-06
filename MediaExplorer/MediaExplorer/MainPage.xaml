@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MediaExplorer.MainPage"
+             xmlns:services="clr-namespace:MediaExplorer.Services" xmlns:views="clr-namespace:MediaExplorer.Views"
+             x:DataType="services:NavigationHandler" BackgroundColor="#151522">
+    <ContentPage.BindingContext>
+        <services:NavigationHandler/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="25"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            
+            <Label Text="Media Explorer" FontSize="125" Grid.Column="1" Grid.Row="1"
+                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 0, 25, 0"/>
+
+            <ContentView Grid.Column="1" Grid.Row="2" Content="{Binding CurrentView}"/>
+
+            <Button Text="BACK" Command="{Binding Back}" Grid.Column="1" Grid.Row="3"
+                    HorizontalOptions="Start"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

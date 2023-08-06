@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaExplorer.Tizen.TV", "MediaExplorer\MediaExplorer.Tizen.TV\MediaExplorer.Tizen.TV.csproj", "{2A821C4D-CD11-4C47-A6CC-27BF4913041C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaExplorer.Tizen.TV", "MediaExplorer\MediaExplorer.Tizen.TV\MediaExplorer.Tizen.TV.csproj", "{2A821C4D-CD11-4C47-A6CC-27BF4913041C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaExplorer", "MediaExplorer\MediaExplorer\MediaExplorer.csproj", "{56AF6FE6-7133-4AA8-A02C-32FCF38A6D54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediaExplorer", "MediaExplorer\MediaExplorer\MediaExplorer.csproj", "{56AF6FE6-7133-4AA8-A02C-32FCF38A6D54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

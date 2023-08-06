@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:MediaExplorer.ViewModels"
+             x:Class="MediaExplorer.Views.StorageSelectButton"
+             x:DataType="viewmodels:StorageSelectButtonViewModel">
+    <ContentView.Content>
+        <Frame BackgroundColor="#202027" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Column="1" Grid.Row="1">
+                    <Label Text="{Binding Name}" />
+                    <Label Text="{Binding Type}" />
+                    <Label Text="{Binding RootPath}" />
+                    <Label Text="{Binding Size}" />
+                    <Label Text="{Binding FreeSize}" />
+                    <Button Command="{Binding SelectStorage}" Text="Select Storage" />
+                </StackLayout>
+            </Grid>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

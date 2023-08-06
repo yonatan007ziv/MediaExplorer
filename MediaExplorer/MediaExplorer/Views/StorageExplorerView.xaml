@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MediaExplorer.Views.StorageExplorerView">
+    <ContentView.Content>
+        <ScrollView Orientation="Horizontal">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout x:Name="_directoryStackLayout" Orientation="Horizontal" Grid.Row="0"/>
+                <StackLayout x:Name="_moviesStackLayout" Orientation="Horizontal" Grid.Row="1"/>
+            </Grid>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

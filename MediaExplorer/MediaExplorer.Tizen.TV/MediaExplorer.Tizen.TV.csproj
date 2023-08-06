@@ -1,31 +1,32 @@
 <Project Sdk="Tizen.NET.Sdk/1.0.9">
 
-  <!-- Property Group for Tizen50 Project -->
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>tizen60</TargetFramework>
-  </PropertyGroup>
+	<!-- Property Group for Tizen50 Project -->
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>tizen60</TargetFramework>
+	</PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugType>portable</DebugType>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>None</DebugType>
-  </PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugType>portable</DebugType>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugType>None</DebugType>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="lib\" />
-    <Folder Include="res\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="lib\" />
+		<Folder Include="res\" />
+	</ItemGroup>
 
-  
-  <ItemGroup>
+
+	<ItemGroup>
     <ProjectReference Include="..\MediaExplorer\MediaExplorer.csproj" />
   </ItemGroup>
 
 
   <!-- Include Nuget Package for Tizen Project building -->
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
     <PackageReference Include="Tizen.NET.TV" Version="6.6.0.5599517">
       <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>

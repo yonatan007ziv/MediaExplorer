@@ -1,4 +1,4 @@
-﻿using System;
+﻿using MediaExplorer.Tizen.TV.Services;
 
 namespace MediaExplorer.Tizen.TV
 {
@@ -14,6 +14,12 @@ namespace MediaExplorer.Tizen.TV
         {
             var app = new Program();
             global::Xamarin.Forms.Platform.Tizen.Forms.Init(app);
+
+            Xamarin.Forms.DependencyService.Register<TizenStorageService>();
+            Xamarin.Forms.DependencyService.Register<TizenLogger>();
+            Xamarin.Forms.DependencyService.Register<TizenMediaPlayerService>();
+            Xamarin.Forms.DependencyService.Register<TizenPermissionService>();
+
             app.Run(args);
         }
     }
